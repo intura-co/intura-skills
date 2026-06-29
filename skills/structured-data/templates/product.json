@@ -1,0 +1,37 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "<PAGE_URL>/#product",
+  "name": "<PRODUCT_NAME>",
+  "description": "<PRODUCT_DESCRIPTION>",
+  "image": [
+    "<IMAGE_URL_1_ABSOLUTE>",
+    "<IMAGE_URL_2_ABSOLUTE>"
+  ],
+  "sku": "<SKU>",
+  "mpn": "<MANUFACTURER_PART_NUMBER>",
+  "brand": {
+    "@type": "Brand",
+    "name": "<BRAND_NAME>"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "<PAGE_URL>",
+    "priceCurrency": "USD",
+    "price": "49.00",
+    "priceValidUntil": "2026-12-31",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": {
+      "@type": "Organization",
+      "name": "<SELLER_NAME>"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "128",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}

@@ -1,0 +1,48 @@
+# Northwind Analytics
+
+> Northwind Analytics is a privacy-first product analytics platform that helps SaaS teams track activation, retention, and revenue without cookies.
+
+Northwind replaces fragile event pipelines with a single autocapture SDK and a
+warehouse-native data model. This file maps the pages most useful for
+understanding what Northwind does, how to install it, and how to query data.
+Sections are ordered from highest to lowest priority; the Optional section may
+be skipped when context is limited.
+
+## Product
+
+- [Overview](https://northwind.com/): what Northwind is, who it is for, and how it differs from cookie-based analytics.
+- [Pricing](https://northwind.com/pricing): plans, event quotas, and the free tier limits.
+- [Autocapture](https://northwind.com/product/autocapture): how the SDK records events with no manual instrumentation.
+- [Warehouse sync](https://northwind.com/product/warehouse): stream raw events into BigQuery, Snowflake, or Postgres.
+
+## Docs
+
+- [Quickstart](https://northwind.com/docs/quickstart): install the SDK and see your first event in under 10 minutes.
+- [Installation](https://northwind.com/docs/install): framework guides for React, Next.js, Vue, and plain HTML.
+- [Tracking events](https://northwind.com/docs/events): manual events, properties, and naming conventions.
+- [Identifying users](https://northwind.com/docs/identify): tie events to accounts and users for retention analysis.
+- [Querying data](https://northwind.com/docs/query): the SQL schema and example funnel/retention queries.
+- [Data privacy](https://northwind.com/docs/privacy): cookieless design, IP anonymization, and GDPR handling.
+
+## API
+
+- [REST API reference](https://northwind.com/docs/api): endpoints, auth, rate limits, and pagination.
+- [SDK reference](https://northwind.com/docs/sdk): every method and configuration option for the JS SDK.
+
+## Guides
+
+- [Build an activation funnel](https://northwind.com/guides/activation): define steps and measure drop-off.
+- [Measure retention](https://northwind.com/guides/retention): cohort retention curves from raw events.
+- [Self-hosting](https://northwind.com/guides/self-host): run Northwind on your own infrastructure with Docker.
+
+## Company
+
+- [About](https://northwind.com/about): team, mission, and the privacy-first thesis.
+- [Contact & support](https://northwind.com/contact): how to reach sales and support.
+
+## Optional
+
+- [Blog](https://northwind.com/blog): product updates and analytics engineering articles.
+- [Changelog](https://northwind.com/changelog): release notes for the SDK and dashboard.
+- [Security & compliance](https://northwind.com/security): SOC 2, data residency, and subprocessors.
+- [Status](https://status.northwind.com): live uptime and incident history.

@@ -1,0 +1,60 @@
+# robots.allow-search-block-training.txt
+# Intura Skills -- ai-crawler-access
+# Goal: stay fully visible in AI SEARCH / ANSWERS, but opt OUT of model TRAINING.
+#   - Retrieval, AI-search-index, and live user-fetch bots are ALLOWED.
+#   - Pure training crawlers and the training-only opt-out tokens are BLOCKED.
+#
+# Important: blocking training does NOT reduce your AI search visibility, and
+# does NOT affect Google Search or Apple/Siri ranking. robots.txt is voluntary;
+# for hard guarantees, also enforce by user-agent + IP at your CDN/WAF.
+#
+# Merge into your existing robots.txt; keep your private Disallow rules.
+# Replace example.com with your domain.
+
+# --- Default: allow all (traditional search + AI retrieval/search bots stay in) ---
+User-agent: *
+Disallow:
+
+# --- Block pure training / dataset crawlers ---
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# --- Opt out of model training via vendor tokens (search/index UNAFFECTED) ---
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# --- Intentionally LEFT ALLOWED (they fall under "User-agent: *" above) ---
+# These keep you citable in AI search and live answers -- do NOT block them:
+#   OAI-SearchBot, ChatGPT-User       (OpenAI / ChatGPT search + live fetch)
+#   Claude-User, Claude-SearchBot     (Anthropic / Claude live + search)
+#   PerplexityBot, Perplexity-User    (Perplexity index + live fetch)
+#   Applebot                          (Apple search / Siri / Spotlight)
+#   Googlebot                         (Google Search, incl. AI Overviews source)
+
+Sitemap: https://example.com/sitemap.xml
+
+# Recommended next step: publish https://example.com/llms.txt (run the llms-txt skill).

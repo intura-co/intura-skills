@@ -1,0 +1,56 @@
+# robots.block-all-ai.txt
+# Intura Skills -- ai-crawler-access
+# Goal: keep TRADITIONAL search engines (Google, Bing, Apple) but block AI
+# crawlers, AI search indexes, AI live-fetch agents, and AI training.
+#
+# Reminder: robots.txt is VOLUNTARY -- well-behaved bots comply, some (e.g.
+# Bytespider) have ignored it. For enforceable blocks, also filter by
+# user-agent and the vendors' published IP ranges at your CDN / WAF / firewall.
+#
+# Merge into your existing robots.txt; keep your private Disallow rules.
+# Replace example.com with your domain.
+
+# --- OpenAI (training + ChatGPT search + live fetch) ---
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+Disallow: /
+
+# --- Anthropic (training + Claude search + live fetch + legacy) ---
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: anthropic-ai
+Disallow: /
+
+# --- Perplexity (index + live fetch) ---
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Disallow: /
+
+# --- Other AI crawlers ---
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: Timpibot
+Disallow: /
+
+# --- Opt out of AI training for engines whose crawler also powers normal search.
+# Googlebot (Search) and Applebot (Siri/Spotlight) stay ALLOWED below; only
+# their AI-training use is opted out via these tokens. ---
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+# Traditional search left intact (NOT listed above, so allowed):
+#   Googlebot (Google Search), Bingbot (Bing), Applebot (Apple search/Siri).
+# Note: this also removes you from Google AI Overviews only if you additionally
+# block Googlebot -- which would remove you from Google Search entirely.
+
+Sitemap: https://example.com/sitemap.xml

@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "<SITE_URL>/about#person",
+  "name": "<FULL_NAME>",
+  "givenName": "<FIRST_NAME>",
+  "familyName": "<LAST_NAME>",
+  "url": "<PROFILE_OR_HOMEPAGE_URL>",
+  "image": "<HEADSHOT_URL_ABSOLUTE>",
+  "jobTitle": "<JOB_TITLE>",
+  "description": "<SHORT_BIO_ONE_SENTENCE>",
+  "email": "<EMAIL>",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "<ORGANIZATION_NAME>",
+    "url": "<ORGANIZATION_URL>"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "<SCHOOL_OR_UNIVERSITY_NAME>"
+  },
+  "knowsAbout": ["<TOPIC_1>", "<TOPIC_2>", "<TOPIC_3>"],
+  "sameAs": [
+    "<LINKEDIN_PROFILE_URL>",
+    "<X_TWITTER_PROFILE_URL>",
+    "<GITHUB_OR_OTHER_PROFILE_URL>"
+  ]
+}
